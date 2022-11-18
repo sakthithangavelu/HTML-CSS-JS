@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <canvas id="Canvas" width="200" height="100" style="border:5px solid #000000;">
+        Your browser does not support the HTML canvas tag.
+        </canvas>
+
+        <script>
+            var c = document.getElementById("Canvas");
+            var ctx = c.getContext("2d");
+            ctx.font = "33px Arial";
+            ctx.fillText("Hello World", 10, 50);
+        </script>
+
+        <svg width="100" height="100">
+           <circle cx="50" cy="50" r="40"
+           stroke="green" stroke-width="4" fill="yellow"/>
+           Sorry, your browser does not support inline SVG.
+        </svg>
+
+</body>
+</html>
