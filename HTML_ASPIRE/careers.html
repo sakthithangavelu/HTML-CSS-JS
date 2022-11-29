@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aspiresystem.com</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    pre {
+      width: 400px;
+      height: 100px;
+      margin: auto;
+      padding: 10px;
+      border: 2px solid black;
+      text-align: center;
+      background-color: darkmagenta;
+      color: aliceblue;
+      overflow: scroll;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="careerslogstyle">
+    <Fieldset>
+      <legend>Aspire Careers</legend>
+      <h2>Register Here For Call Back</h2>
+      <label for="fname">FIRST NAME: </label>
+      <input type="text" id="fname" name="Fname" required>
+      <br><br>
+      <label for="lname">LAST NAME: </label>
+      <input type="text" id="lname" name="Lname" required>
+      <br><br>
+      <label>MOBILE :</label>
+      <input type="text" id="mobile" name="mob" value="+91&nbsp" required>
+      <br><br>
+      <label>EMAIL:</label>
+      <input type="email" id="email" name="email" required>
+      <br><br>
+      <label for="D.O.B">D.O.B: </label>
+      <input type="date" id="dob" name="D.O.B" required>
+      <br><br>
+      <label>GENDER :</label>
+      <select style="width:180px;height:20px" id="gender" required>
+        <option value="&nbsp">Select here</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Others">Others</option>
+      </select>
+      <br><br>
+      <label>NATIONALITY :</label>
+      <input type="radio" id="india" name="Indian" value="INDIAN">Indian
+      <input type="radio" id="others" name="Indian" value="Others">Others
+      <br><br>
+      <label>EXPERIENCE:</label>
+      <label><input type="radio" id="fresher" name="experience" value="INDIAN">Fresher</label>
+      <label><input type="radio" id="experience" name="experience" value="Others">Experience</label> <br><br>
+      <button onclick="store()">SUBMIT</button>
+  </div>
+  </Fieldset>
+  <br><br>
+  <pre>
+    <strong>Openings available for:</strong>
+
+   ~Java developer
+     ~Dotnet Developer
+    ~React Developer
+      ~Angular Developer
+         ~Manual Test Engineer
+             ~Automation Test Engineer
+    ~Quality Analyst
+         ~System Administrator
+  
+  </pre>
+
+  <script>
+    function store() {
+
+      var fname = document.getElementById('fname')
+      var lname = document.getElementById('lname')
+      var mobile = document.getElementById('mobile')
+      var email = document.getElementById('email')
+      var dob = document.getElementById('dob')
+      var gender = document.getElementById('gender')
+      var india = document.getElementById('india')
+      var others = document.getElementById('others')
+      var fresher = document.getElementById('fresher')
+      var experience = document.getElementById('experience')
+      sessionStorage.setItem('fname', fname.value)
+      sessionStorage.setItem('lname', lname.value)
+      sessionStorage.setItem('mobile', mobile.value)
+      sessionStorage.setItem('email', email.value)
+      sessionStorage.setItem('dob', dob.value)
+      sessionStorage.setItem('gender', gender.value)
+      sessionStorage.setItem('india', india.value)
+      sessionStorage.setItem('others', others.value)
+      sessionStorage.setItem('fresher', fresher.value)
+      sessionStorage.setItem('experience', experience.value)
+      alert('Form has been successfully submitted.')
+    }
+  </script>
+</body>
+
+</html>
