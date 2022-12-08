@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aspiresystem.com</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    input:required:invalid {
+      border-color: red;
+      border-style: dotted;
+    }
+
+    input:required:valid {
+      border-color: green;
+    }
+
+    button {
+      background-color: midnightblue;
+      color: rgb(252, 252, 252);
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <div id="logstyle">
+      <form>
+        <fieldset>
+          <br>
+          <div class="header">
+            <img src="images.png" alt="logo" />
+
+          </div>
+          <br>
+          <legend>LOGIN HERE</legend>
+          <label>ACE ID:</label>
+          <input type="text" id="aceid" name="Name" required pattern="[A-Z]{3}[0-9]{4,5}$"
+            placeholder="Enter your name">
+          <br>
+          <br>
+          <label>PASSWORD:</label>
+          <input type="password" id="password" required
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}$" placeholder="Enter the password" />
+          <br>
+          <br>
+          <button onclick="store()">ENTER</button> <button>FORGOT PASSWORD</button>
+          <br><br><br><br><br>
+        </fieldset>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    function store() {
+
+      var aceid = document.getElementById('aceid')
+      var password = document.getElementById('password')
+      localStorage.setItem('aceid', aceid.value)
+      localStorage.setItem('password', password.value)
+      alert('Password saved')
+
+    }
+  </script>
+</body>
+
+</html>
